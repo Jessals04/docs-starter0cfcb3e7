@@ -1,0 +1,81 @@
+{
+  "title": "My site",
+  "description": "Start building modern documentation site in 4 steps - Docuo",
+  "favicon": "image/favicon.png",
+  "themeConfig": {
+    "colorMode": {
+      "defaultMode": "dark",
+      "disableSwitch": false
+    },
+    "navbar": {
+      "title": "My project",
+      "logo": {
+        "light": "image/logo_light.png",
+        "dark": "image/logo_dark.png"
+      },
+      "items": [
+        {
+          "type": "docSidebar",
+          "sidebarId": "mySidebar",
+          "label": "Documentation"
+        },
+        {
+          "type": "default",
+          "label": "Homepage",
+          "href": "https://www.spreading.ai"
+        }
+      ]
+    },
+    "footer": {
+      "logo": {
+        "light": "image/logo_light.png",
+        "dark": "image/logo_dark.png"
+      },
+      "caption": "My project",
+      "links": [
+        {
+          "title": "Product",
+          "items": [
+            {
+              "label": "Blog",
+              "href": "https://www.spreading.ai/blog"
+            },
+            {
+              "label": "Sign up",
+              "href": "https://app.spreading.ai/signup"
+            },
+            {
+              "label": "Log in",
+              "href": "https://app.spreading.ai/login"
+            }
+          ]
+        }
+      ],
+      "socials": [
+        {
+          "logo": "Twitter",
+          "href": "https://twitter.com/docuo_team"
+        },
+        {
+          "logo": "LinkedIn",
+          "href": "https://www.linkedin.com/company/spreadingai"
+        },
+        {
+          "logo": "Discord",
+          "href": "https://discord.gg/pgJFhUwzAU"
+        },
+        {
+          "logo": "GitHub",
+          "href": "https://github.com/spreadingai"
+        }
+      ]
+    }
+  },
+  "search": {
+    "algolia": {
+      "appId": "YOUR_APP_ID",
+      "apiKey": "YOUR_API_KEY",
+      "indexName": "YOUR_INDEX_NAME"
+    }
+  }
+}
