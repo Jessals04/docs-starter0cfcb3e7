@@ -23,8 +23,8 @@
     },
     "footer": {
       "logo": {
-        "light": "image/logo_light.png",
-        "dark": "image/logo_dark.png"
+        "dark": "https://media-resource.spreading.io/docuo/workspace731/2f8ff819c916a3803f30f67a875ae8ee/footer_dark_logo.png?ts=1721874462102",
+        "light": "https://media-resource.spreading.io/docuo/workspace731/2f8ff819c916a3803f30f67a875ae8ee/footer_light_logo.png?ts=1721874455150"
       },
       "caption": "Lindisfarne Dev",
       "links": [
@@ -33,18 +33,16 @@
           "items": [
             {
               "label": "Lindisfarne AI",
-              "href": "https://lindisfarne.ai"
+              "href": "https://lindisfarne.ai",
+              "id": "48dceff0"
             }
-          ]
+          ],
+          "id": "df6c816c"
         }
       ],
-      "socials": [
-        {
-          "logo": "https://www.lindisfarne.nsw.edu.au/wp-content/uploads/2021/04/LAGS_Crest_RGB_Digital-use.png",
-          "href": "https://lindisfarne.nsw.edu.au"
-        }
-      ]
-    }
+      "socials": []
+    },
+    "removeWatermark": false
   },
   "search": {
     "algolia": {
