@@ -10,19 +10,14 @@
     "navbar": {
       "title": "Lindisfarne Dev",
       "logo": {
-        "light": "image/logo_light.png",
-        "dark": "image/logo_dark.png"
+        "light": "https://www.lindisfarne.nsw.edu.au/wp-content/uploads/2021/04/LAGS_Crest_RGB_Digital-use.png",
+        "dark": "https://www.lindisfarne.nsw.edu.au/wp-content/uploads/2021/04/LAGS_Crest_RGB_Digital-use.png"
       },
       "items": [
         {
           "type": "docSidebar",
           "sidebarId": "mySidebar",
           "label": "Documentation"
-        },
-        {
-          "type": "default",
-          "label": "Homepage",
-          "href": "https://lindisfarne.nsw.edu.au"
         }
       ]
     },
