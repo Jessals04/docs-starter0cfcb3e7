@@ -77,5 +77,10 @@
       "apiKey": "YOUR_API_KEY",
       "indexName": "YOUR_INDEX_NAME"
     }
+  },
+  "openapi": {
+    "answers": {
+      "specPath": "docs/answers.yaml"
+    }
   }
 }
