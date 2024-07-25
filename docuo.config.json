@@ -80,8 +80,8 @@
   },
   "openapi": {
     "answers": {
-      "specPath": "/answers/answers.yaml",
-      "outputDir": "/answers/"
+      "specPath": "/docs/answers/answers.yaml",
+      "outputDir": "/docs/answers/"
     }
   }
 }
