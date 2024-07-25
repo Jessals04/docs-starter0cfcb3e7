@@ -1,8 +1,8 @@
 ---
 id: get
 title: "Get"
-description: "Get"
-api: eJydk8FunDAQhl8FzdmFbY+oqpRUVZRztqfNHmZhADdgOx6TDUK8ezU2JLutmkM5gD2eGX/+/TNDTVx57YK2Bkq4owAKrCOPErmvoYQ2xhx6HCiQZygPMxgcCErAqiJmUKCl+nkkP4ECrjoaEMoZwuQkjYPXpgUF9IqD61MImwYW9QfAvqMsNc1ab0eXhY6ykclnjnxj/aBNG2OenkfikGnOtMlhOSpYQ7e2nmTvyppAJsgQnet1FY9U/GLZaN5QWMZy7HKGF+xHYYNFHmnIzhpOOV92O/lc44KkMVWj12GKwpwIPfmbMXRQHo6CNVDo7KWQsgQFGj6T50L0Iv+yCTv6HkroQnBcFgU6l/fa1Job9IZyw+ec6jHHMZ542/lBBE+Yl/u/6S/ttnuReUqK8No0NmbqEO/lJmGBAkFKp/yc7/IdqKgoViKVVDrLYcCo5eqG5J4rhS6uYV1ekQK9hsL1qI2YIJ56XrU5AL5BwFFBZzlIdJ5PyPTT98si4eQ20azWjKeeaigb7Jk+QPhfe/0D+4mmy5/g3T9HmXgtVNEGCjrCmnzETVXfE9SnvTR+r/3LqlcWuvuxBwWn1eGDraXE4xlUfJfwCI8Q/2BpEA0R4zP0aNoRW8lPbeUK8domqy3UNhDYdQnNdAH59TYmZHv7ROYbbEIEmcJyXJblNz+TeYg=
+description: "Returns an array of docs with their access and tags."
+api: eJytk8GK20AMhl9l0GUvxkl7NKWwpWXZW2nTU8hBseV4WHtmVpI3G4zfvWicLMlCeyg92dLI0qd/fk/QkNTsk/oYoIIfpCMHcRgcMuPJxdY1sRZ39No57cizw7omsZLGKR6khAJiIkZr8dhABQdSKCAh40BKLFBtJwg4EFSwfAwFeBv3PBKfoACpOxoQqgn0lKxMlH04QAH0ikPqlxS2LczFO+JNRxeiA8cxGaQbhdgl4jby4MMh55ieRxJ1XpwPpftKLY59Du/SuO99fVfCvCuASVIMQmI4H9dre9yOhHkuQKge2espL7cnZOL7UTuotjvrMpB28VoMO4IVBjkSy8p2Jn65iDNyDxV0qkmq1QpTKnsfGi8tcqAyyLGkZixxzICXyT9NtAXzev6bhtbuoq3FS1GG96GNudJr1vZ+wYL34p7zJhIGd//90WmH6rDv49FkVGKsrXbxBwZHw56axoeDuAYV9yhkBrFNl5YfynW5hgLqGBRrhWoyoBRFBwzGdDbKQ9btBmfKH1HQfzfqWRqlV12lHn0wQ2X1p/MdbQHfxIBdAV0Utew02S6/uJ9nSy/OtbtrvOC+pwaqFnuhvzD/V6v+YZcnOl3/ZS/Yj5Qtu7OAvaFmj15Z9OHbBgrAW/ec3VJcXmzV8xGG01XrT19ygdvEJwqf4YKgFsK8m+f5N3VpgMU=
 info_path: docs/answers/answers
 ---
 
@@ -11,9 +11,8 @@ info_path: docs/answers/answers
 <MethodEndpoint method={"get"} path={"/answers/"}></MethodEndpoint>
 
 
-Get
+Returns an array of docs with their access and tags.
 ## Request
-<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><h3 className={"openapi-markdown__details-summary-header-params"}>Query Parameters</h3></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"access","in":"query","schema":{"type":"string","example":"staff"},"description":"The access group the user performing the request is in."}}></ParamsItem></ul></div></details>
-<MimeTabs className={"openapi-tabs__mime request"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><ul className={"request-schema-first-body-node-container"}>any</ul></details></TabItem></MimeTabs>
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><h3 className={"openapi-markdown__details-summary-header-params"}>Query Parameters</h3></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"access","in":"query","schema":{"type":"string","example":"staff"},"description":"The access group the user performing the request is in. Default is 'public'."}}></ParamsItem></ul></div></details>
 <div><div><ApiTabs label={undefined} id={undefined}><TabItem label={"200"} value={"200"}><div></div><div></div></TabItem></ApiTabs></div></div>
       

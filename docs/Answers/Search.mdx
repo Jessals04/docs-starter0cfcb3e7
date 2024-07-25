@@ -1,18 +1,18 @@
 ---
 id: search
 title: "Search"
-description: "Search"
-api: eJydU0Fu2zAQ/IoxZ1Z2mxtRFEiKHnpqUbsnx4e1tImYSBRDUnYMgX8vlpYcGSl66Mn0ajg7O7McUHEovXHRdBYaayZf1lDoHHuS4vcKGmEqe37pOcS7rjpBDyg7G9lGOZJzjSnzleVTELIBoay5JTnFk2NodPsnLiMUnJcG0XDId8uSQ5jhQvTGPkKBX6l1zbnUV2xjQFJoTGviDG77ds9+Dr9JCpFf4785N7UJCxMWtIgcYlEUSCldAFnQaIgecKCm57naN0kXRTdT179TZ3bPwXU2nOk/rVbycx0CBBa47L2JJ+jtgD2TZ3/bxxp6u0s7hZZj3Uk0rgvZUJJvWJINR/YiKbA/yEnu976BRh2jC3q5JOeKxtjKhAfylgsbjgVXfUE9hHrqvJb0zjLn/S+GCp30yTDoEZTFywL8eluVb5Pj/2+egrEPXe5uYg7v9jKpjHl27mOxKlZQeS+plPRFjVjUUt5IS1nqZc2vjJ/t8xtiHFaULV1DxoqW7Ocwmr7FZPpOoZY49BbDsKfAv32TkpRfevYS5U7hQN7QXkbY7pJCzVSxzyk98wkaX88aPmyksZrW7v37utqCnz/WGyjsx3fZdpXc8XSUN0tHaNzjHvldC0MONdcHNGQfe3oU/JlXLKPrqMdo1XQQteMnsqeZys93GbDYdM9sv0CNM0X5i7RLKf0BIyKA+A==
+description: "Takes a string that is used to search for the closest matching docs in the embeddings database."
+api: eJy9VE1z0zAQ/SuavXAxToGbh2GmBQ6cYGg5hRw29iYWtSWhXTXNePzfmZWctuFrOJFLZGn19u3bp52gI26jDWK9gwZu8JbYoGGJ1u2N9CjGsklMnRFvmDC2vdn5aKQn0w6eicWMKG2v8Z1v2ViXD2ncUtdZt2fToeAWmWqowAeKqNk+dNBAAYQKIn1PxHLluyM0E7TeCTnRJYYw2DZfWX1jZTkBtz2NqCs5BoIG/PYbtbLg2EgdNGsQuhfYVBCiJhVLnG/o7uPNUilUPwvRk9HIUvpSUmGrVdA9jmGgHGhZJUIjxFLXNcwVYNsS879lKbFmH30KRXBNlZiiCRR3Po6lE6f0msy62ryjHaZBWPvyLKTtYNtn59RYUkdOWBkNdrRPy3Zp3FL8LaER7+2YRlNCjN+Vtoo3kSRFd5bk1TzPD5+54uvS0maCOxwS5RYucjwyeiD0qloa8jsh8097ysE7LvAvLy7075w2aBhTm6KVIzTrCbaEkeJlkh6a9WbeVDCS9F49FzyrUwLqGazQ8YEir0AR4h1FzgApDtBALxK4Wa0whHqwrrO8w+iodnyoqUs1JlDsU+pr9WXh+ZTAg+oKp3lyGDRLUGav1v78+AjenwSe/qxP9Vdh5wqs2/mMYCUb4rKU+kvXl/2M7szlpw/FhzgM/qBmE4rYaqw5WOk15g+PW9UrkC/qi/oCqvyQsVXnaZEq/Yj5CTvMClyfBsAZoycD4D+MpKU5qvMqDGidPpjc/2lxyRrwQTqdKL1aqFnDNCnGlzjMs25/TxTVfpsK7jBa3Krq681cQU/YUczGuqUjNPC21Pf8RnNXp6fy67A7c+6nj9c3UMF2GZKj7/ROxIMOPjxAA1/hK+QhqwjZh3l/ggHdPuFe4wuutgPP3bm4sTotlO1yhO74hOXrqxxgbvwtuTdQLTWJfsK8mef5B2BfLTU=
 info_path: docs/answers/answers
 ---
 
 <h1 className={"openapi__heading"}>Search</h1>
 
-<MethodEndpoint method={"post"} path={"/answers"}></MethodEndpoint>
+<MethodEndpoint method={"post"} path={"/answers/"}></MethodEndpoint>
 
 
-Search
+Takes a string that is used to search for the closest matching docs in the embeddings database.
 ## Request
-<MimeTabs className={"openapi-tabs__mime request"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><ul className={"request-schema-first-body-node-container"}><SchemaItem collapsible={false} name={"access"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"students"}}></SchemaItem><SchemaItem collapsible={false} name={"limit"} required={false} schemaName={"number"} qualifierMessage={undefined} schema={{"type":"number","example":3}}></SchemaItem><SchemaItem collapsible={false} name={"text"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"This is a test..."}}></SchemaItem></ul></details></TabItem></MimeTabs>
+<MimeTabs className={"openapi-tabs__mime request"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><ul className={"request-schema-first-body-node-container"}><SchemaItem collapsible={false} name={"text"} required={true} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","description":"The text used in the search.","example":"This is a test..."}}></SchemaItem><SchemaItem collapsible={false} name={"access"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","description":"The access group that the user performing the search is in. Defaults to 'public'.","example":"students"}}></SchemaItem><SchemaItem collapsible={false} name={"limit"} required={false} schemaName={"number"} qualifierMessage={undefined} schema={{"type":"number","description":"The maximum number of docs to return.","example":3}}></SchemaItem></ul></details></TabItem></MimeTabs>
 <div><div><ApiTabs label={undefined} id={undefined}><TabItem label={"200"} value={"200"}><div></div><div></div></TabItem></ApiTabs></div></div>
       

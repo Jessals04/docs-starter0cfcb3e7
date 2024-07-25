@@ -1,6 +1,7 @@
 openapi: 3.0.3
 info:
   title: Answers
+  description: Answers is an API that allows interaction with an embeddings database.
   version: 1.0.0
   contact: {}
 servers:
@@ -9,7 +10,7 @@ paths:
   /answers/:
     get:
       summary: Get
-      description: Get
+      description: Returns an array of docs with their access and tags.
       operationId: get
       parameters:
         - name: access
@@ -17,45 +18,79 @@ paths:
           schema:
             type: string
             example: staff
-          description: The access group the user performing the request is in.
-      requestBody:
-        content:
-          application/json:
-            examples:
-              Get:
-                value: ''
+          description: The access group the user performing the request is in. Default is 'public'.
       responses:
         '200':
           description: ''
       security:
         - bearerAuth: []
-  /answers:
+    post:
+      summary: Search
+      description: Takes a string that is used to search for the closest matching docs in the embeddings database.
+      operationId: search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                  - text
+              properties:
+                text:
+                  type: string
+                  description: The text used in the search.
+                  example: This is a test...
+                access:
+                  type: string
+                  description: The access group that the user performing the search is in. Defaults to 'public'.
+                  example: students
+                limit:
+                  type: number
+                  description: The maximum number of docs to return.
+                  example: 3
+            examples:
+              Search:
+                value:
+                  access: students
+                  limit: 3
+                  text: This is a test...
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
     put:
       summary: Insert
-      description: Insert
+      description: Inserts an array of docs into the embeddings database.
       operationId: insert
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              required:
+                - docs
               properties:
-                access:
-                  type: array
-                  items: {}
-                  example: []
                 docs:
                   type: array
                   items:
                     type: string
                     example: Students must wear a tie in term 2 and term 3.
+                  description: An array of strings that contain the content for each doc to be inserted.
                   example:
                     - Students must wear a tie in term 2 and term 3.
+                access:
+                  type: array
+                  items:
+                    type: string
+                    example: 'students'
+                  description: An array of strings that denote the groups that have access to these docs. Defaults to 'public'.
                 tags:
                   type: array
                   items:
                     type: string
                     example: School Policies
+                  description: An array of strings representing tags for the docs being inserted. Defaults to an empty array.
                   example:
                     - School Policies
                     - Technology
@@ -75,36 +110,6 @@ paths:
           description: ''
       security:
         - bearerAuth: []
-    post:
-      summary: Search
-      description: Search
-      operationId: search
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                access:
-                  type: string
-                  example: students
-                limit:
-                  type: number
-                  example: 3
-                text:
-                  type: string
-                  example: This is a test...
-            examples:
-              Search:
-                value:
-                  access: students
-                  limit: 3
-                  text: This is a test...
-      responses:
-        '200':
-          description: ''
-      security:
-        - bearerAuth: []
     delete:
       summary: Delete
       description: Delete
@@ -114,12 +119,15 @@ paths:
           application/json:
             schema:
               type: object
+              required:
+                - ids
               properties:
                 ids:
                   type: array
                   items:
                     type: string
                     example: '451335129797767456'
+                  description: An array of ids to delete. Also takes a single id (as a string).
                   example:
                     - '451335129797767456'
             examples:
@@ -134,34 +142,42 @@ paths:
         - bearerAuth: []
     patch:
       summary: Swap
-      description: Swap
+      description: Swaps a current doc for a new doc.
       operationId: swap
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              required:
+                - id
+                - text
               properties:
+                id:
+                  type: string
+                  description: The id of the doc currently in the embeddings database. This doc will be removed.
+                  example: '451335129797767430'
+                text:
+                  type: string
+                  description: The content of the new doc.
+                  example: This is the new doc...
                 access:
                   type: array
                   items:
                     type: string
-                    example: public
+                    example: staff
+                  description: An array of strings that denote the groups that have access to these docs. Defaults to 'public'.
                   example:
-                    - public
-                id:
-                  type: string
-                  example: '451335129797767430'
+                    - staff
+                    - students
                 tags:
                   type: array
                   items:
                     type: string
                     example: Test
+                  description: An array of strings representing tags for the docs being inserted. Defaults to an empty array.
                   example:
                     - Test
-                text:
-                  type: string
-                  example: This is a test...
             examples:
               Swap:
                 value:
@@ -181,5 +197,6 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
+security:
+  - bearerAuth: []
 tags: []
-

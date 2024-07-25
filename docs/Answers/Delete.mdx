@@ -2,17 +2,17 @@
 id: delete
 title: "Delete"
 description: "Delete"
-api: eJx9U01v2zAM/SvDO2v5aJsGNYYB7ZrDgJ227JTmwNhsotaWVUlOahj+7wMVO3HQbSfL1NMj+R7ZIGOfOm2DLg0SPHLOgaFQWnYkwe8ZEmR92PFbxT48lFmNpEFamsAmyJGszXUan4xfvJA18OmOC5JTqC0jQbl54TRAwTpJEDR7udWZH4DIOaqhoAMXw7gPTpstFPidCptL6GY2vb6eTa/u5nfz+e38ZnaLdnC/+htg3bZnTOTvmk4a7Cmv+FTRP59HBsfelsYfKa4mE/lcigmBeU4rp0ONZNVgw+TY3Vdhh2S1btcKBYddeSGxJbnFmIw/sPMQCreXkzBULkeCXQjWJ+MxWTvKtcm0fyZneGT8YcRZNaIKQt7n/iU+HAsdVnBSVugkT4Qh6UCxfLHy59n0RS/t/yVS0Oa5jBl0iE7dn7qRVo76TEeT0QQqThGlMkWS0ZY+FBTnx1As5zSUF/IOpu+M6BoK/B7GNidtZB6iZk0n7Aq9sGuFXemDhJpmQ55/u7xtJfxWsRPD1gp7cpo2cZikrR1Txi468co1Enw71vB5KYlVP0Aft+HC68fFj8VyAYVNt0dFmckrRwfZMTogwROeEPdQOKJ1Md4gJ7OtaCv4I7OIRpeGdgaq/iD19ttl6kGdXx4i4NOyfGXzFarrKsgvWpn1PxKiXIY=
+api: eJx9VE1v2zAM/SsCTxvgOelnUGMYkK45FNhh2LpTmgNjsbFaR1Ilumlg+L8PlJ00WbedLD2Tj1+PakFTLIPxbJyFAm6oJibIwHkKKOCthgL0Dg703FDka6e3ULRQOstkWY7ofW3K5DJ6jELWQiwrWqOceOsJCnDLRyp54DGBNBRzMDrCIgMfJCYbiuIg4JsfhoBbyMAwrQ/xyMHYFWRAr7j2tUDnFydnZxcnp1eTq8nkcnJ+cQld9keVU6sSo3IPyuio2Km+wlxN6+gU4xNFhSoau6pJGa0+YLqncB/zw4Dzv0VcdF23t0kJD40tWnjBuqF9if90TwyBonc29hSn47F8jksBMYtUNsHwFop5C0vCQGHacAXFfNEtMlgTV+5ojB7lL4zQxg2FOALhCC8UYqJoQg0FVMw+FqMRep/XxmoTHzBYym3c5KSbHBsQ9l3wnzLsPtPDFPazEjqJk8ygGIxS/qKXH2/Kmu16+/8eZWDsg0sRDKfZT/ty4P28E65MVGjV9Put4gpZYV27TVTGMgUsxVZtDFdiQ+slaW3sKiqNjEuMJFOXDvWUJ/k4H0OWNgBL2QApxLvIa0zat5iq3C/UUUYHm/NmMfSJ6ZVHvkZjRbhpFO0wsDngvkJZmcpFFrRtJcFfoe46gZ8bCqKFRQYvGAwuk06lYRWhppBm/ERbKOBrn8anO4md7bT5fpmPZHQz+za7m0EGy+EZWDstXgE3stq4gQLu4R7SMyIcSRQJb6FGu2pwJfY9s/QNj6UySCPbHSTf3Utgtwd5fr5OBurOPZH9AtlQFcsVOlmj39QGncQ=
 info_path: docs/answers/answers
 ---
 
 <h1 className={"openapi__heading"}>Delete</h1>
 
-<MethodEndpoint method={"delete"} path={"/answers"}></MethodEndpoint>
+<MethodEndpoint method={"delete"} path={"/answers/"}></MethodEndpoint>
 
 
 Delete
 ## Request
-<MimeTabs className={"openapi-tabs__mime request"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><ul className={"request-schema-first-body-node-container"}><SchemaItem collapsible={false} name={"ids"} required={false} schemaName={"string[]"} qualifierMessage={undefined} schema={{"type":"array","items":{"type":"string","example":"451335129797767456"},"example":["451335129797767456"]}}></SchemaItem></ul></details></TabItem></MimeTabs>
+<MimeTabs className={"openapi-tabs__mime request"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><ul className={"request-schema-first-body-node-container"}><SchemaItem collapsible={false} name={"ids"} required={true} schemaName={"string[]"} qualifierMessage={undefined} schema={{"type":"array","items":{"type":"string","example":"451335129797767456"},"description":"An array of ids to delete. Also takes a single id (as a string).","example":["451335129797767456"]}}></SchemaItem></ul></details></TabItem></MimeTabs>
 <div><div><ApiTabs label={undefined} id={undefined}><TabItem label={"200"} value={"200"}><div></div><div></div></TabItem></ApiTabs></div></div>
       
