@@ -1,14 +1,14 @@
 {
-  "title": "My site",
-  "description": "Start building modern documentation site in 4 steps - Docuo",
+  "title": "Lindisfarne Dev Docs",
+  "description": "Documentation for Lindisfarne's APIs.",
   "favicon": "image/favicon.png",
   "themeConfig": {
     "colorMode": {
-      "defaultMode": "dark",
+      "defaultMode": "system",
       "disableSwitch": false
     },
     "navbar": {
-      "title": "My project",
+      "title": "Lindisfarne Dev",
       "logo": {
         "light": "image/logo_light.png",
         "dark": "image/logo_dark.png"
@@ -22,7 +22,7 @@
         {
           "type": "default",
           "label": "Homepage",
-          "href": "https://www.spreading.ai"
+          "href": "https://lindisfarne.nsw.edu.au"
         }
       ]
     },
@@ -31,42 +31,22 @@
         "light": "image/logo_light.png",
         "dark": "image/logo_dark.png"
       },
-      "caption": "My project",
+      "caption": "Lindisfarne Dev",
       "links": [
         {
-          "title": "Product",
+          "title": "Products",
           "items": [
             {
-              "label": "Blog",
-              "href": "https://www.spreading.ai/blog"
-            },
-            {
-              "label": "Sign up",
-              "href": "https://app.spreading.ai/signup"
-            },
-            {
-              "label": "Log in",
-              "href": "https://app.spreading.ai/login"
+              "label": "Lindisfarne AI",
+              "href": "https://lindisfarne.ai"
             }
           ]
         }
       ],
       "socials": [
         {
-          "logo": "Twitter",
-          "href": "https://twitter.com/docuo_team"
-        },
-        {
-          "logo": "LinkedIn",
-          "href": "https://www.linkedin.com/company/spreadingai"
-        },
-        {
-          "logo": "Discord",
-          "href": "https://discord.gg/pgJFhUwzAU"
-        },
-        {
-          "logo": "GitHub",
-          "href": "https://github.com/spreadingai"
+          "logo": "Web",
+          "href": "https://lindisfarne.nsw.edu.au"
         }
       ]
     }
