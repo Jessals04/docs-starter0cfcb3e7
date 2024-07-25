@@ -1,0 +1,185 @@
+openapi: 3.0.3
+info:
+  title: Answers
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: https://app.lindisfarne.nsw.edu.au
+paths:
+  /answers/:
+    get:
+      summary: Get
+      description: Get
+      operationId: get
+      parameters:
+        - name: access
+          in: query
+          schema:
+            type: string
+            example: staff
+          description: The access group the user performing the request is in.
+      requestBody:
+        content:
+          application/json:
+            examples:
+              Get:
+                value: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+  /answers:
+    put:
+      summary: Insert
+      description: Insert
+      operationId: insert
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access:
+                  type: array
+                  items: {}
+                  example: []
+                docs:
+                  type: array
+                  items:
+                    type: string
+                    example: Students must wear a tie in term 2 and term 3.
+                  example:
+                    - Students must wear a tie in term 2 and term 3.
+                tags:
+                  type: array
+                  items:
+                    type: string
+                    example: School Policies
+                  example:
+                    - School Policies
+                    - Technology
+                    - IT
+            examples:
+              Insert:
+                value:
+                  access: []
+                  docs:
+                    - Students must wear a tie in term 2 and term 3.
+                  tags:
+                    - School Policies
+                    - Technology
+                    - IT
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    post:
+      summary: Search
+      description: Search
+      operationId: search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access:
+                  type: string
+                  example: students
+                limit:
+                  type: number
+                  example: 3
+                text:
+                  type: string
+                  example: This is a test...
+            examples:
+              Search:
+                value:
+                  access: students
+                  limit: 3
+                  text: This is a test...
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    delete:
+      summary: Delete
+      description: Delete
+      operationId: delete
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+                    example: '451335129797767456'
+                  example:
+                    - '451335129797767456'
+            examples:
+              Delete:
+                value:
+                  ids:
+                    - '451335129797767456'
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    patch:
+      summary: Swap
+      description: Swap
+      operationId: swap
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access:
+                  type: array
+                  items:
+                    type: string
+                    example: public
+                  example:
+                    - public
+                id:
+                  type: string
+                  example: '451335129797767430'
+                tags:
+                  type: array
+                  items:
+                    type: string
+                    example: Test
+                  example:
+                    - Test
+                text:
+                  type: string
+                  example: This is a test...
+            examples:
+              Swap:
+                value:
+                  access:
+                    - public
+                  id: '451335129797767430'
+                  tags:
+                    - Test
+                  text: This is a test...
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags: []
+
