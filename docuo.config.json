@@ -53,9 +53,13 @@
     "hidden": true
   },
   "openapi": {
+    "how-to-use-docs": {
+      "specPath": "docs/How To Use Docs/how-to-use-docs.yaml",
+      "outputDir": "docs/How To Use Docs/"
+    },
     "answers": {
-      "specPath": "docs/answers/answers.yaml",
-      "outputDir": "docs/answers/"
+      "specPath": "docs/Answers/answers.yaml",
+      "outputDir": "docs/Answers/"
     }
   }
 }

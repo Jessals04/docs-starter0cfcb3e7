@@ -1,0 +1,86 @@
+---
+id: how-to-use-docs
+title: "How To Use Docs"
+description: "# Step 1 - Create Postman Collection"
+sidebar_position: 0
+---
+
+<span className={"theme-doc-version-badge badge badge--secondary"}>Version: 1.0.0</span>
+
+<h1 className={"openapi__heading"}>How To Use Docs</h1>
+
+
+
+
+# Step 1 - Create Postman Collection
+
+Click the **+** in the collections panel in Postman. The name of this collection will be the name of the api in docs.
+
+For each unique request, create a Postman request within the collection.
+
+# Step 2 - Convert to YAML
+
+Click on the Postman collection and select the three circles next to the **Share** button in the top right of the window. In the drop down, click **Export**. Select **Collection v2.1** and click **Export**.
+
+Head to this [Postman/OpenAPI](https://kevinswiber.github.io/postman2openapi/) converter and replace the Postman Collection JSON with the JSON exported from Postman. Copy the YAML for the next step.
+
+# Step 3 - Create the YAML File
+
+Within the docs Docker volume (`/docs/docs`) create a folder with the name of the API. Create a YAML file within this new folder with the YAML content from the previous step.
+
+# Step 4 - Adjust the Docuo Config File
+
+Find the file titled `docuo.config.json` with the Docker volume. Towards the bottom there is an object called `openapi`. Within that object, create another object with the title of the new api. Specify the path to the YAML file created in step 3 and the folder in which to produce the MDX files.
+
+``` json
+{
+  "openapi": {
+    "new-api": {
+      "specPath": "docs/New API/new-api.yaml",
+      "outputDir": "docs/New API/"
+    }
+  }
+}
+
+ ```
+
+# Step 5 - Produce the MDX Files
+
+Open the terminal and go to the folder containing the `docuo.config.json` file. Run the following command and step through the process to produce the MDX files.
+
+``` bash
+// Generate MDX files
+docuo gen-openapi-docs
+// If docuo is not installed, use the following npm command
+npm i -g @spreading/docuo
+
+ ```
+
+# Step 6 - Save Changes
+
+The page should update instantly with the new documentation. If it does not, restart the docs container.
+
+It is also advised to build the Docker image and push it to the Lindisfarne Docker Registry (`docker-registry.lindisfarne.nsw.edu.au`).
+
+``` bash
+// Build and tag the image - make sure to be within
+// the folder containing the `docuo.config.json` file
+docker build -t docker-registry.lindisfarne.nsw.edu.au/docs:<NEW_VERSION_NUMBER> .
+// Login to the Lindisfarne Docker Registry if not already done
+docker login docker-registry.lindisfarne.nsw.edu.au
+// Push the image to the Lindisfarne Docker Registry
+docker push docker-registry.lindisfarne.nsw.edu.au/docs:<NEW_VERSION_NUMBER>
+
+ ```
+
+
+# Notes
+When creating a docker compose to use this image, it is recommended to only specify a volumes folder for `/docs` if you are working on it's contents.
+If there is a volumes folder specified and there are changes to the image, the volume will need to be removed for the new files to be used, otherwise the files within the volume will be used.
+
+
+
+
+
+
+      
